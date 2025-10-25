@@ -118,6 +118,38 @@ If you want to break the boundaries of symbolic computation and let deep learnin
 
 ---
 
+## 🚀 Performance Insights & VRAM Usage
+
+Below is a sample output from `demo.py` showcasing DFN's performance and VRAM usage during scalability tests. Note the significant increase in processing time for very long sequences, which indicates that the dedicated GPU VRAM capacity might have been exceeded, forcing the system to utilize slower shared system RAM.
+
+```
+
+⚡ PERFORMANCE BENCHMARK
+==============================
+📏 Scalability test:
+   Length   32: 0.034s, Current VRAM: 59.0MB, Reserved: 96.0MB, ΔAlloc: 0.1MB, ΔReserved: 22.0MB
+   Length   64: 0.033s, Current VRAM: 59.0MB, Reserved: 96.0MB, ΔAlloc: 0.0MB, ΔReserved: 22.0MB
+   Length  128: 0.027s, Current VRAM: 59.2MB, Reserved: 96.0MB, ΔAlloc: 0.0MB, ΔReserved: 22.0MB
+   Length  256: 0.028s, Current VRAM: 59.4MB, Reserved: 98.0MB, ΔAlloc: 0.0MB, ΔReserved: 24.0MB
+   Length  512: 0.025s, Current VRAM: 59.9MB, Reserved: 98.0MB, ΔAlloc: 0.0MB, ΔReserved: 22.0MB
+   Length 204800: 0.296s, Current VRAM: 458.9MB, Reserved: 2886.0MB, ΔAlloc: 0.0MB, ΔReserved: 2410.0MB
+   Length 256000: 0.429s, Current VRAM: 558.9MB, Reserved: 3986.0MB, ΔAlloc: 0.0MB, ΔReserved: 3012.0MB
+   Length 307200: 1.509s, Current VRAM: 658.9MB, Reserved: 4790.0MB, ΔAlloc: 0.0MB, ΔReserved: 3616.0MB
+   Length 358400: 5.220s, Current VRAM: 758.9MB, Reserved: 5592.0MB, ΔAlloc: 0.0MB, ΔReserved: 4218.0MB
+   Length 409600: 10.885s, Current VRAM: 858.9MB, Reserved: 6394.0MB, ΔAlloc: 0.0MB, ΔReserved: 4820.0MB
+   Length 460800: 13.353s, Current VRAM: 958.9MB, Reserved: 7196.0MB, ΔAlloc: 0.0MB, ΔReserved: 5422.0MB
+   Length 512000: 13.663s, Current VRAM: 1058.9MB, Reserved: 7996.0MB, ΔAlloc: 0.0MB, ΔReserved: 6022.0MB
+   Length 563200: 15.506s, Current VRAM: 1158.9MB, Reserved: 8800.0MB, ΔAlloc: 0.0MB, ΔReserved: 6626.0MB
+   Length 614400: 17.125s, Current VRAM: 1258.9MB, Reserved: 9602.0MB, ΔAlloc: 0.0MB, ΔReserved: 7228.0MB
+   Length 665600: 18.507s, Current VRAM: 1358.9MB, Reserved: 10404.0MB, ΔAlloc: 0.0MB, ΔReserved: 7830.0MB
+   Length 716800: 20.203s, Current VRAM: 1458.9MB, Reserved: 8506.0MB, ΔAlloc: 0.0MB, ΔReserved: 5732.0MB
+   Length 768000: 21.351s, Current VRAM: 1558.9MB, Reserved: 9106.0MB, ΔAlloc: 0.0MB, ΔReserved: 6132.0MB
+```
+
+*Peak VRAM utilization observed during this test was approximately **1558.9MB**.*
+
+---
+
 ## 👋 Get Involved
 
 - Star ⭐ the repo if you like the idea!
