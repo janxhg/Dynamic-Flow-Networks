@@ -1,0 +1,7 @@
+# Python dependencies for DFN project
+# You might need to specify exact versions for full reproducibility.
+
+torch
+numpy
+tqdm
+psutil
